@@ -16,6 +16,7 @@
 #' @rdname file_ext
 #' @export
 #' @examples
+#' library(magrittr)
 #' (r_files <- dir(file.path(R.home(), "doc/manual"), full.names = TRUE))
 #'
 #' file_ext(r_files)

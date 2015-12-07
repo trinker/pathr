@@ -8,6 +8,8 @@ Depends: R (>= 3.2.2)
 Imports: clipr, magrittr, tools, utils
 Suggests: testthat
 Date: 2015-12-06
+URL: http://trinker.github.com/pathr
+BugReports: http://github.com/trinker/pathrx/issues
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)

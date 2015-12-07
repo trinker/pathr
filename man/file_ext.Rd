@@ -28,6 +28,7 @@ parsing tools to make their integration seamless (particularly in a pipeable
 form).
 }
 \examples{
+library(magrittr)
 (r_files <- dir(file.path(R.home(), "doc/manual"), full.names = TRUE))
 
 file_ext(r_files)
