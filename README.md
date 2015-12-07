@@ -14,7 +14,7 @@ Status](https://coveralls.io/repos/trinker/pathr/badge.svg?branch=master)](https
 <img src="inst/pathr_logo/r_pathr.png" width="320" alt="pathr Logo">
 
 **pathr** is a collection of tools to extract, examine, and reconfigure
-elements of filepaths.
+elements of file paths.
 
 Function Usage
 ==============
@@ -33,7 +33,7 @@ descriptions are summarized in the table below:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>pares_path</code></td>
+<td align="left"><code>parse_path</code></td>
 <td align="left">parsing</td>
 <td align="left">Parse path into elements (sub-directories &amp; files)</td>
 </tr>
@@ -60,7 +60,7 @@ descriptions are summarized in the table below:
 <tr class="even">
 <td align="left"><code>normalize</code></td>
 <td align="left">manipulate</td>
-<td align="left">Make all path separators foward slashes</td>
+<td align="left">Make all path separators forward slashes</td>
 </tr>
 <tr class="odd">
 <td align="left"><code>file_ext</code>/<code>no_file_ext</code></td>
@@ -80,7 +80,7 @@ descriptions are summarized in the table below:
 </tbody>
 </table>
 
-The `copy` function is also availavle and extends
+The `copy` function is also available and extends
 [`clipr::write_clipboard`](https://github.com/mdlincoln/clipr) to allow
 the user to easily copy a path to the clipboard but return the original
 value. This makes `copy` pipeable.
