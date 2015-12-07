@@ -1,0 +1,78 @@
+---
+title: "pathr"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  md_document:
+    toc: true      
+---
+
+```{r, echo=FALSE}
+desc <- suppressWarnings(readLines("DESCRIPTION"))
+regex <- "(^Version:\\s+)(\\d+\\.\\d+\\.\\d+)"
+loc <- grep(regex, desc)
+ver <- gsub(regex, "\\2", desc[loc])
+verbadge <- sprintf('<a href="https://img.shields.io/badge/Version-%s-orange.svg"><img src="https://img.shields.io/badge/Version-%s-orange.svg" alt="Version"/></a></p>', ver, ver)
+````
+
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
+[![Build Status](https://travis-ci.org/trinker/pathr.svg?branch=master)](https://travis-ci.org/trinker/pathr)
+[![Coverage Status](https://coveralls.io/repos/trinker/pathr/badge.svg?branch=master)](https://coveralls.io/r/trinker/pathr?branch=master)
+`r verbadge`
+
+<img src="inst/pathr_logo/r_pathr.png" width="320" alt="pathr Logo">  
+
+**pathr** is a collection of tools to extract, examine, and reconfigure elements of filepaths.
+
+# Function Usage
+
+Functions typically fall into the task category of (1) parsing, (2) manipulating, (3) examining.  The main functions, task category, & descriptions are summarized in the table below:
+
+
+| Function                  | Task       | Description                                               | 
+|---------------------------|------------|-----------------------------------------------------------| 
+| `pares_path`              | parsing    | Parse path into elements (sub-directories & files)        | 
+| `front`/`back`            | manipulate | Get first/last n elements of a path                       | 
+| `index`                   | manipulate | Get indexed elements of a path                            | 
+| `before`/`after`          | manipulate | Get n elements before/after a regex occurrence            | 
+| `swap`/`swap_index`/`swap_regex` | manipulate | Replace elements of a path                         | 
+| `normalize`               | manipulate | Make all path separators foward slashes                   | 
+| `file_ext`/`no_file_ext`  | manipulate | Get/remove file extensions                                | 
+| `tree`                    | examine    | View path structure as an ascci style tree (experimental) | 
+| `indent_path`             | examine    | View path hierarchy as an indented list                   | 
+
+The `copy` function is also availavle and extends [`clipr::write_clipboard`](https://github.com/mdlincoln/clipr) to allow the user to easily copy a path to the clipboard but return the original value.  This makes `copy` pipeable.
+
+# Installation
+
+To download the development version of **pathr**:
+
+Download the [zip ball](https://github.com/trinker/pathr/zipball/master) or [tar ball](https://github.com/trinker/pathr/tarball/master), decompress and run `R CMD INSTALL` on it, or use the **pacman** package to install the development version:
+
+```r
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load_gh("trinker/pathr")
+```
+
+# Contact
+
+You are welcome to:
+* submit suggestions and bug-reports at: <https://github.com/trinker/pathr/issues>
+* send a pull request on: <https://github.com/trinker/pathr/>
+* compose a friendly e-mail to: <tyler.rinker@gmail.com>
+
+# Demonstration
+
+***Under Construction*** - Excuse the sparsity/spelling in this early development stage
+
+
+## Load the Packages/Data
+
+```{r, message=FALSE}
+if (!require("pacman")) install.packages("pacman")
+
+pacman::p_load(pathr, magrittr)
+
+data(files)
+head(files)
+```
+

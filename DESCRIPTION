@@ -1,0 +1,13 @@
+Package: pathr
+Title: Easy Manipulation and Piping of File Paths
+Version: 0.0.1
+Authors@R: c(person("Tyler", "Rinker", email = "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
+Description: Tools to extract and reconfigure elements of filepaths.
+Depends: R (>= 3.2.2)
+Imports: clipr, magrittr, tools, utils
+Suggests: testthat
+Date: 2015-12-06
+License: GPL-2
+LazyData: TRUE
+Roxygen: list(wrap = FALSE)
