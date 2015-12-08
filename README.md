@@ -17,7 +17,7 @@ Status](https://coveralls.io/repos/trinker/pathr/badge.svg?branch=master)](https
 elements of file paths. The package is born out of a frustration with
 finding the right base **R** tools to grab certain parts of a path.
 Often these functions are located in packages that are base install but
-not loaded by default (e.g., `tools::file_ext`). Additionally, many
+not loaded by default (e.g., `tools::file.ext`). Additionally, many
 names of path manipulation functions in base **R** are longer and thus
 often difficult to remember and require more time to type. Still, other
 path manipulation tasks had me building my own custom manipulation tools
@@ -204,7 +204,7 @@ the path. The final output from one of the manipulation functions is a
 *sub-path* of the original at most the same number of elements as the
 original.
 
-In this example I parse multipath vector:
+In this example I parse a multi-path vector:
 
     myfiles %>%
         parse_path()
