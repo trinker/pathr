@@ -703,7 +703,7 @@ may not be able to be opened.
 ### Copying
 
 `copy_path` uses the [**clipr**]() package's `write_clip` function to
-write the current vector, `x` to the clipboard but still return `x`.
+write the current vector, `x`, to the clipboard but still returns `x`.
 This makes the copying pipeable, allowing the contents to be copied yet
 be passed along in the chain.
 
