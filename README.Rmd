@@ -35,7 +35,7 @@ parsedwd <- parse_path(curwd)
 
 <img src="inst/pathr_logo/r_pathr.png" width="320" alt="pathr Logo">  
 
-**pathr** is a collection of tools to extract, examine, and reconfigure elements of file paths.  The package is born out of a frustration with finding the right base **R** tools to grab certain parts of a path.  Often these functions are located in packages that are base install but not loaded by default (e.g., `tools::file_ext`).  Additionally, many names of path manipulation functions in base **R** are longer and thus often difficult to remember and require more time to type.  Still, other path manipulation tasks had me building my own custom manipulation tools via `strsplit` and `file.path`.  **pathr** is designed to be a consistent set of tools that allow the user to solve most path related needs simply by remembering 5 basic sets of parsing and manipulation tools (the first five rows in the table of function usage found in the [Function Usage](#function-usage) section).  The package is designed to be pipeable (easily used within a **magrittr**/**pipeR** pipeline) but is not required.
+**pathr** is a collection of tools to extract, examine, and reconfigure elements of file paths.  The package is born out of a frustration with finding the right base **R** tools to grab certain parts of a path.  Often these functions are located in packages that are base install but not loaded by default (e.g., `tools::file_ext`).  Additionally, many names of path manipulation functions in base **R** are longer and thus often difficult to remember and require more time to type.  Still, other path manipulation tasks had me building my own custom manipulation tools via `strsplit` and `file.path`.  **pathr** is designed to be a consistent set of tools that allow the user to solve most path related needs simply by remembering 6 basic sets of parsing and manipulation tools (the first six rows in the table of function usage found in the [Function Usage](#function-usage) section).  The package is designed to be pipeable (easily used within a **magrittr**/**pipeR** pipeline) but is not required.
 
 # Function Usage
 
@@ -49,8 +49,8 @@ Functions typically fall into the task category of (1) parsing, (2) manipulating
 | `index`                   | manipulate | Get indexed elements of a path                            | 
 | `before`/`after`          | manipulate | Get n elements before/after a regex occurrence            | 
 | `swap`/`swap_index`/`swap_regex` | manipulate | Replace elements of a path                         | 
-| `normalize`               | manipulate | Make all path separators forward slashes                  | 
 | `file_path`               | manipulate | Combine file paths                                        |
+| `normalize`               | manipulate | Make all path separators forward slashes                  | 
 | `win_fix`                 | manipulate | Replace single backslash with a forward slash             |
 | `file_ext`/`no_file_ext`  | manipulate | Get/remove file extensions                                | 
 | `tree`                    | examine    | View path structure as an ASCII style tree (experimental) | 

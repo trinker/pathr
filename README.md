@@ -23,8 +23,8 @@ often difficult to remember and require more time to type. Still, other
 path manipulation tasks had me building my own custom manipulation tools
 via `strsplit` and `file.path`. **pathr** is designed to be a consistent
 set of tools that allow the user to solve most path related needs simply
-by remembering 5 basic sets of parsing and manipulation tools (the first
-five rows in the table of function usage found in the [Function
+by remembering 6 basic sets of parsing and manipulation tools (the first
+six rows in the table of function usage found in the [Function
 Usage](#function-usage) section). The package is designed to be pipeable
 (easily used within a **magrittr**/**pipeR** pipeline) but is not
 required.
@@ -95,14 +95,14 @@ category, & descriptions are summarized in the table below:
 <td align="left">Replace elements of a path</td>
 </tr>
 <tr class="even">
-<td align="left"><code>normalize</code></td>
-<td align="left">manipulate</td>
-<td align="left">Make all path separators forward slashes</td>
-</tr>
-<tr class="odd">
 <td align="left"><code>file_path</code></td>
 <td align="left">manipulate</td>
 <td align="left">Combine file paths</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>normalize</code></td>
+<td align="left">manipulate</td>
+<td align="left">Make all path separators forward slashes</td>
 </tr>
 <tr class="even">
 <td align="left"><code>win_fix</code></td>
