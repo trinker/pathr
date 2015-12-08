@@ -39,4 +39,5 @@ test_that("indent_path prints",{
         c("-> C:", "  -> Users", "    -> Tyler", "      -> Desktop",
             "        -> guy "
         )
+    )
 })
