@@ -246,18 +246,13 @@ In this example I parse a multi-path vector:
 Manipulating
 ------------
 
-Once the path has been parsed the individual elements can be extracted
-and/or replaced to form sub-paths. In this section I break the
-manipulation functions into (1) extraction and (2) replacement types.
-There are a few miscellaneous **pathr** functions that are not an
-extraction or replacemnt tool which will be discussed at the end of the
-Manipulation section.
+Once the path has been parsed the individual elements can be extracted and/or replaced to form sub-paths.  In this section I break the manipulation functions into (1) extracting (2) replacing, and (3) combining types.  There are a few miscellaneous **pathr** functions that are not an extracting, replacing, or combining tool which will be discussed at the end of the Manipulating section.  
 
-### Extraction
+### Extracting
 
-Extraction can focus on replacing path elements by their numeric index
+Extracting can replace path elements by their numeric index
 or by their content relative to a matched regular expression. There are
-three sets of extraction functions (1) `front`/`back`, (2) `index`, and
+three sets of extracting functions (1) `front`/`back`, (2) `index`, and
 (3) `before`/`after`. The first two rely on matching elements to their
 numeric position while the latter set uses extraction relative to a
 regular expression match.
@@ -431,14 +426,14 @@ does not contain that element match `NA` is returned.
     ##  [7] "~/Packages/qdap/R" "~/Packages/qdap/R" "~/Packages/qdap/R"
     ## [10] "~/Packages/qdap/R"
 
-### Replacement
+### Replacing
 
 Often the user will want to replace elements of a path with another. The
 `swap` function allows the user to match with a numeric index or a
 regular expression to determine the element locations to be replaced.
 The `swap_index` & `swap_regex` functions are less flexible than the
 more inclusive function but are also more explicit, transparent and
-pipeable. Preference is typically given to the later `swap` functions in
+pipeable. Preference is typically given to the later `swap_xxx` functions in
 chained usage.
 
 #### `swap`
@@ -462,7 +457,7 @@ In this scenerio I replace the root tilde with `MyRoot`:
 
 #### `swap_index` & `swap_regex`
 
-In the next use I replace `qdap` with `textMinging` by referencing the
+In the next use I replace `qdap` with `textMining` by referencing the
 third element:
 
     myfiles %>%
@@ -513,6 +508,7 @@ replace elements:
     ##  [9] "~/Packages/qdap/R/function.R"        
     ## [10] "~/Packages/qdap/R/function.R"
 
+### Combining
 ### Miscellaneous
 
 As noted above, **pathr** contains a few functions that are not an
