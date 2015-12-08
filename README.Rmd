@@ -248,7 +248,7 @@ While the above tools work to produce sub-paths with an equal or less length of 
 file_path("root", "mydir", paste0("file", 1:2, ".pdf"))
 ```
 
-This is especially useful when combined with extraction/repacement techniques to form not paths as shown below:
+This is especially useful when combined with extraction/repacement techniques to form new paths as shown below:
 
 ```{r}
 myfiles %>%
