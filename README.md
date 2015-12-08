@@ -528,7 +528,7 @@ forward slash.
     ## [1] "root/mydir/file1.pdf" "root/mydir/file2.pdf"
 
 This is especially useful when combined with extraction/repacement
-techniques to form not paths as shown below:
+techniques to form new paths as shown below:
 
     myfiles %>%
         parse_path()  %>% 
