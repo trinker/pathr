@@ -10,10 +10,10 @@
 #' @param symbol The prefix symbol to use before the path element.
 #' @export
 #' @examples
-#' indent_path("C:/Users/Tyler/Desktop/guy")
-#' indent_path("C:/Users/Tyler/Desktop/guy", symbol="--")
-#' indent_path("C:/Users/Tyler/Desktop/guy", symbol=".")
-#' indent_path("C:/Users/Tyler/Desktop/guy", symbol="")
+#' indent_path("C:/Users/Tyler/Desktop/guy", copy2clip = FALSE)
+#' indent_path("C:/Users/Tyler/Desktop/guy", symbol="--", copy2clip = FALSE)
+#' indent_path("C:/Users/Tyler/Desktop/guy", symbol=".", copy2clip = FALSE)
+#' indent_path("C:/Users/Tyler/Desktop/guy", symbol="", copy2clip = FALSE)
 indent_path <- function(path = NULL, copy2clip = is.global(2), symbol = "->"){
     if (is.null(path)) path <- indent_path()
     m <- parse_path(path)[[1]]
