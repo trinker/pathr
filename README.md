@@ -29,8 +29,32 @@ Usage](#function-usage) section). The package is designed to be pipeable
 (easily used within a **magrittr**/**pipeR** pipeline) but is not
 required.
 
+
+Table of Contents
+============
+
+-   [Function Usage](#function-usage)
+-   [Installation](#installation)
+-   [Contact](#contact)
+-   [Demonstration](#demonstration)
+    -   [Load the Packages/Data](#load-the-packagesdata)
+    -   [Parsing](#parsing)
+    -   [Manipulating](#manipulating)
+        -   [Extraction](#extraction)
+        -   [Replacement](#replacement)
+        -   [Miscellaneous](#miscellaneous)
+    -   [Examination](#examination)
+        -   [Tree](#tree)
+        -   [Indented Elements](#indented-elements)
+    -   [Action](#action)
+        -   [Opening](#opening)
+        -   [Opening Directories](#opening-directories)
+        -   [Opening Files](#opening-files)
+        -   [Copying](#copying)
+
 Function Usage
-==============
+============
+
 
 Functions typically fall into the task category of (1) parsing, (2)
 manipulating, (3) examining, & (4) action. The main functions, task
@@ -113,32 +137,8 @@ category, & descriptions are summarized in the table below:
 </tbody>
 </table>
 
-
-Table of Contents
-============
-
--   [Function Usage](#function-usage)
--   [Installation](#installation)
--   [Contact](#contact)
--   [Demonstration](#demonstration)
-    -   [Load the Packages/Data](#load-the-packagesdata)
-    -   [Parsing](#parsing)
-    -   [Manipulating](#manipulating)
-        -   [Extraction](#extraction)
-        -   [Replacement](#replacement)
-        -   [Miscellaneous](#miscellaneous)
-    -   [Examination](#examination)
-        -   [Tree](#tree)
-        -   [Indented Elements](#indented-elements)
-    -   [Action](#action)
-        -   [Opening](#opening)
-        -   [Opening Directories](#opening-directories)
-        -   [Opening Files](#opening-files)
-        -   [Copying](#copying)
-
 Installation
 ============
-
 
 To download the development version of **pathr**:
 
