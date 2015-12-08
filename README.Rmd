@@ -112,11 +112,11 @@ myfiles %>%
 
 ## Manipulating 
 
-Once the path has been parsed the individual elements can be extracted and/or replaced to form sub-paths.  In this section I break the manipulation functions into (1) extraction and (2) replacement types.  There are a few miscellaneous **pathr** functions that are not an extraction or replacemnt tool which will be discussed at the end of the Manipulation section.  
+Once the path has been parsed the individual elements can be extracted and/or replaced to form sub-paths.  In this section I break the manipulation functions into (1) extracting (2) replacing, and (3) combining types.  There are a few miscellaneous **pathr** functions that are not an extracting, replacing, or combining tool which will be discussed at the end of the Manipulating section.  
 
-### Extraction
+### Extracting
 
-Extraction can focus on replacing path elements by their numeric index or by their content relative to a matched regular expression.  There are three sets of extraction functions (1) `front`/`back`, (2) `index`, and (3) `before`/`after`.  The first two rely on matching elements to their numeric position while the latter set uses extraction relative to a regular expression match.
+Extracting can replace path elements by their numeric index or by their content relative to a matched regular expression.  There are three sets of extracting functions (1) `front`/`back`, (2) `index`, and (3) `before`/`after`.  The first two rely on matching elements to their numeric position while the latter set uses extraction relative to a regular expression match.
 
 #### Front & Back 
 
@@ -202,9 +202,9 @@ myfiles %>%
     before("\\.R$")
 ```
 
-### Replacement
+### Replacing
 
-Often the user will want to replace elements of a path with another. The `swap` function allows the user to match with a numeric index or a regular expression to determine the element locations to be replaced.  The `swap_index` & `swap_regex` functions are less flexible than the more inclusive function but are also more explicit, transparent and pipeable.  Preference is typically given to the later `swap` functions in chained usage.
+Often the user will want to replace elements of a path with another. The `swap` function allows the user to match with a numeric index or a regular expression to determine the element locations to be replaced.  The `swap_index` & `swap_regex` functions are less flexible than the more inclusive function but are also more explicit, transparent and pipeable.  Preference is typically given to the later `swap_xxx` functions in chained usage.
 
 
 #### `swap`
@@ -219,7 +219,7 @@ myfiles %>%
 
 #### `swap_index` & `swap_regex`
 
-In the next use I replace `qdap` with `textMinging` by referencing the third element:
+In the next use I replace `qdap` with `textMining` by referencing the third element:
 
 ```{r}
 myfiles %>%
@@ -239,11 +239,7 @@ myfiles %>%
     swap_regex("\\.R$", "function.R")
 ```
 
-### Miscellaneous
-
-As noted above, **pathr** contains a few functions that are not an extraction or replacemnt tool.  
-
-#### Combine/Construct
+### Combining
 
 While the above tools work to produce sub-paths with an equal or less length of elements `file_path` is a means to combine/construct file paths that may be greater in length that the original path/elements supplied.  `file_path` is wrapper for `base::file.path` that uses the underscore naming convention and normalizes the separator to be a single forward slash.
 
@@ -261,6 +257,11 @@ myfiles %>%
     na.omit() %>%
     file_path("Root", "newPackage", .)
 ```
+
+
+### Miscellaneous
+
+As noted above, **pathr** contains a few functions that are not an extracting, replacing, or combining tool.  
 
 #### Normalizing
 
