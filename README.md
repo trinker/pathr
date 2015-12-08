@@ -518,7 +518,7 @@ replace elements:
 
 While the above tools work to produce sub-paths with an equal or less
 length of elements `file_path` is a means to combine/construct file
-paths that may be greater in length that the original path/elements
+paths that may be greater in length than the original path/elements
 supplied. `file_path` is wrapper for `base::file.path` that uses the
 underscore naming convention and normalizes the separator to be a single
 forward slash.
