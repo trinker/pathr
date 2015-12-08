@@ -584,7 +584,7 @@ contents (all the sub-directories and files contained within a parent
 directory) as a tree. This function is experimental, OS dependant, and
 requires that the tree program ([tree for
 Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true)
-or [tree for Unix](http://www.computerhope.com/unix/tree.htm))be
+or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be
 installed.
 
 On my Windows system this is the tree structure for this **pathr**
