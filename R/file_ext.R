@@ -15,6 +15,7 @@
 #' or the path without the file extension (\code{no_file_ext}).
 #' @rdname file_ext
 #' @export
+#' @importFrom tools file_ext file_path_sans_ext
 #' @examples
 #' library(magrittr)
 #' (r_files <- dir(file.path(R.home(), "doc/manual"), full.names = TRUE))

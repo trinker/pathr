@@ -2,6 +2,13 @@ pathr
 ============
 
 
+    ## 
+    ## Attaching package: 'pathr'
+    ## 
+    ## The following object is masked from 'package:qdap':
+    ## 
+    ##     is.global
+
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
@@ -48,8 +55,6 @@ Table of Contents
         -   [Indented Elements](#indented-elements)
     -   [Action](#action)
         -   [Opening](#opening)
-        -   [Opening Directories](#opening-directories)
-        -   [Opening Files](#opening-files)
         -   [Copying](#copying)
 
 Function Usage
@@ -689,14 +694,14 @@ may not be consistent across operating systems. Depending upon the
 default programs for file types the results may vary as well. Some files
 may not be able to be opened.
 
-### Opening Directories
+#### Opening Directories
 
     open_path()
 
     file_path(.libPaths(), "pathr") %>%
         open_path()
 
-### Opening Files
+#### Opening Files
 
     file_path(R.home(), "doc/html/about.html") %>%
         open_path()

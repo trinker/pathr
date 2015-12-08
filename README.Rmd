@@ -311,7 +311,7 @@ The last type of functions in **pathr** use the operating system to do some sort
 
 `open_path` uses the operating system defaults to open directories and files.  This function is operating system and setting dependant.  Results may not be consistent across operating systems.  Depending upon the default programs for file types the results may vary as well.  Some files may not be able to be opened.
 
-### Opening Directories
+#### Opening Directories
 
 ```{r, eval=FALSE}
 open_path()
@@ -320,7 +320,7 @@ file_path(.libPaths(), "pathr") %>%
     open_path()
 ```
 
-### Opening Files
+#### Opening Files
 
 ```{r, eval=FALSE}
 file_path(R.home(), "doc/html/about.html") %>%
