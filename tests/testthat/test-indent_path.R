@@ -33,3 +33,10 @@ test_that("indent_path ...",{
 
 })
 
+test_that("indent_path prints",{
+    expect_equal(
+        capture.output(print(indent_path("C:/Users/Tyler/Desktop/guy", copy2clip = FALSE))),
+        c("-> C:", "  -> Users", "    -> Tyler", "      -> Desktop",
+            "        -> guy "
+        )
+})

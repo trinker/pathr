@@ -15,9 +15,9 @@ test_that("parse_path parses both forard and double backslash separators",{
 test_that("parse_path prints",{
 
     paths <- c("C:\\Users\\Tyler\\AppData\\Local\\Temp\\Rtmp2Ll9d9", "C:/R/R-3.2.2")
-    capture.output(print(parse_path(paths)))
+
     expect_equal(
-        parse_path(paths),
+        capture.output(print(parse_path(paths))),
         c("[[1]]", "[1] \"C:\"         \"Users\"      \"Tyler\"      \"AppData\"    \"Local\"      \"Temp\"       \"Rtmp2Ll9d9\"",
             "", "[[2]]", "[1] \"C:\"      \"R\"       \"R-3.2.2\"", "")
         )
