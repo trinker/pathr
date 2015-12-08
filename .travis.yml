@@ -5,9 +5,13 @@ before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
   - chmod 755 ./travis-tool.sh
   - ./travis-tool.sh bootstrap
+
+apt_packages:
+  - xclip
+
 install:
   - sh -e /etc/init.d/xvfb start
-  - ./travis-tool.sh aptget_install r-cran-xml 
+  - ./travis-tool.sh aptget_install r-cran-xml
   - ./travis-tool.sh install_github hadley/devtools
   - ./travis-tool.sh install_deps
   - ./travis-tool.sh github_package jimhester/covr
@@ -20,7 +24,7 @@ notifications:
     on_failure:      change
 env:
    global:
-     - R_BUILD_ARGS="--resave-data=best" 
+     - R_BUILD_ARGS="--resave-data=best"
      - R_CHECK_ARGS="--as-cran"
      - DISPLAY=:99.0
      - BOOTSTRAP_LATEX=1

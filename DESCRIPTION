@@ -8,6 +8,9 @@ Description: Tools to extract and reconfigure elements of filepaths.
 Depends: R (>= 3.2.2)
 Imports: clipr, magrittr, tools, utils
 Suggests: testthat
+SystemRequirements: xclip (http://sourceforge.net/projects/xclip/) or xsel
+  (http://www.vergenet.net/~conrad/software/xsel/) for accessing the X11
+  clipboard
 Date: 2015-12-07
 URL: https://github.com/trinker/pathr
 BugReports: http://github.com/trinker/pathr/issues

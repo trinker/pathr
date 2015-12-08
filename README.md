@@ -587,8 +587,8 @@ Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddo
 or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be
 installed.
 
-On my Windows system this is the tree structure for this **pathr**
-package install in **R** libraries:
+On my Windows system this is the tree structure for the **pathr**
+package as installed in **R** library:
 
     file_path(.libPaths(), "pathr") %>%
         tree()

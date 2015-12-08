@@ -20,9 +20,9 @@ used interactively.}
 Separate a path into hierarchical drectories and files for indented reading.
 }
 \examples{
-indent_path("C:/Users/Tyler/Desktop/guy", copy2clip = FALSE)
-indent_path("C:/Users/Tyler/Desktop/guy", symbol="--", copy2clip = FALSE)
-indent_path("C:/Users/Tyler/Desktop/guy", symbol=".", copy2clip = FALSE)
-indent_path("C:/Users/Tyler/Desktop/guy", symbol="", copy2clip = FALSE)
+indent_path("C:/Users/Tyler/Desktop/guy")
+indent_path("C:/Users/Tyler/Desktop/guy", symbol="--")
+indent_path("C:/Users/Tyler/Desktop/guy", symbol=".")
+indent_path("C:/Users/Tyler/Desktop/guy", symbol="")
 }
 

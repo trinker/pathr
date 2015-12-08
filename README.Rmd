@@ -287,7 +287,7 @@ Functions of this class are designed to allow the user to examine structural asp
 
 `tree` allows the user to see the hierarchical structure of a path's contents (all the sub-directories and files contained within a parent directory) as a tree.  This function is experimental, OS dependant, and requires that the tree program ([tree for Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true) or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be installed.
 
-On my Windows system this is the tree structure for this **pathr** package install in **R** libraries:
+On my Windows system this is the tree structure for the **pathr** package as installed in **R** library:
 
 ```{r}
 file_path(.libPaths(), "pathr") %>%
