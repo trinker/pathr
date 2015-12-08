@@ -27,7 +27,7 @@ tree <- function(path = ".", out = NULL, include.files = TRUE,
         message(
             sprintf(
                 "`tree` not found, try using `%s install tree`",
-                ifelse(sysinf['sysname'] == "Darwin", "brew", "sudo apt-get")
+                ifelse(Sys.info()[['sysname']] == "Darwin", "brew", "sudo apt-get")
             )
         )
     }

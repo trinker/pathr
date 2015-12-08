@@ -18,4 +18,5 @@ inst/pathr_logo
 inst/staticdocs
 inst/extra_statdoc
 inst/maintenance.R
+inst/build.R
 pathr.R

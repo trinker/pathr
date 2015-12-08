@@ -14,7 +14,7 @@
 #' @export
 #' @examples
 #' ## copy this line to clipboard...
-#' ## ~/Packages/qdap/R/cm_code.overlap.R
+#' ## ~\Packages\qdap\R\cm_code.overlap.R
 #' ## Now run...
 #' ## win_fix()
 win_fix <- function (clip = TRUE, quote = TRUE, copy2clip = interactive()) {

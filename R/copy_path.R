@@ -13,9 +13,9 @@
 #' files %>%
 #'     parse_path() %>%
 #'     swap_regex("^(P|R)", "oops") %>%
-#'     copy()
+#'     copy_path()
 #' }
-copy <- function(x, ...){
+copy_path <- function(x, ...){
     clipr::write_clip(x, ...)
     x
 }

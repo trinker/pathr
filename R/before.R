@@ -56,8 +56,8 @@ before <- function(x, pattern, include = FALSE, collapse = TRUE, ...){
 #' @rdname before
 after <- function(x, pattern, include = FALSE, collapse = TRUE, ...){
     y <- lapply(x, function(z) {
-        ind <- grep(pattern, z, perl=TRUE, ...)[1]
-        if (!include) ind <- ind - 1
+        ind <- length(z) - grep(pattern, z, perl=TRUE, ...)[1]
+        if (include) ind <- ind + 1
         if (is.na(ind) || ind > length(z) || length(ind) == 0) return(NA)
         utils::tail(z, ind)
     })

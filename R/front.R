@@ -1,7 +1,7 @@
 #' Extract the First/Last N Elements of a Path
 #'
 #' \code{front} - Extract the first n elements of a path.  Similar to
-#' \code{\link[package]{head}} (uses \code{\link[package]{head}} under the hood).
+#' \code{\link[utils]{head}} (uses \code{\link[utils]{head}} under the hood).
 #' Compare the defualt settings to \code{\link[base]{basename}} and
 #' \code{\link[base]{dirname}}.
 #'
@@ -44,6 +44,8 @@
 #'     back(3)
 #'
 #' ## Compare to basename/dirname
+#' (fls <- file.path("","p1","p2","p3", c("file.pdf", "file.txt", "file.Rmd")))
+#'
 #' basename(fls)
 #' fls %>%
 #'     parse_path() %>%
@@ -63,7 +65,7 @@ front <- function(x, n=-1, collapse = TRUE, ...){
 #' Extract the Beginning/Ending Directories/Files of a Path
 #'
 #' \code{back} - Extract the first n elements of a path.  Similar to
-#' \code{\link[package]{tail}} (uses \code{\link[package]{tail}} under the hood).
+#' \code{\link[utils]{tail}} (uses \code{\link[utils]{tail}} under the hood).
 #'
 #' @export
 #' @rdname front
