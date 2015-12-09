@@ -29,8 +29,31 @@ Usage](#function-usage) section). The package is designed to be pipeable
 (easily used within a **magrittr**/**pipeR** pipeline) but is not
 required.
 
+
+Table of Contents
+============
+
+-   [Function Usage](#function-usage)
+-   [Installation](#installation)
+-   [Contact](#contact)
+-   [Demonstration](#demonstration)
+    -   [Load the Packages/Data](#load-the-packagesdata)
+    -   [Parsing](#parsing)
+    -   [Manipulating](#manipulating)
+        -   [Extracting](#extracting)
+        -   [Replacing](#replacing)
+        -   [Combining](#combining)
+        -   [Miscellaneous](#miscellaneous)
+    -   [Examination](#examination)
+        -   [Tree](#tree)
+        -   [Indented Elements](#indented-elements)
+    -   [Action](#action)
+        -   [Opening](#opening)
+        -   [Copying](#copying)
+
 Function Usage
-==============
+============
+
 
 Functions typically fall into the task category of (1) parsing, (2)
 manipulating, (3) examining, & (4) action. The main functions, task
@@ -113,31 +136,8 @@ category, & descriptions are summarized in the table below:
 </tbody>
 </table>
 
-
-Table of Contents
-============
-
--   [Function Usage](#function-usage)
--   [Installation](#installation)
--   [Contact](#contact)
--   [Demonstration](#demonstration)
-    -   [Load the Packages/Data](#load-the-packagesdata)
-    -   [Parsing](#parsing)
-    -   [Manipulating](#manipulating)
-        -   [Extracting](#extracting)
-        -   [Replacing](#replacing)
-        -   [Combining](#combining)
-        -   [Miscellaneous](#miscellaneous)
-    -   [Examination](#examination)
-        -   [Tree](#tree)
-        -   [Indented Elements](#indented-elements)
-    -   [Action](#action)
-        -   [Opening](#opening)
-        -   [Copying](#copying)
-
 Installation
 ============
-
 
 To download the development version of **pathr**:
 
@@ -187,23 +187,23 @@ Parsing
 
 The `parse_path` function simply splits an atomic vector of paths into a
 list of paths split on the slash separator. For example, my current
-working directory, C:/Users/trinker/Desktop/GitHub/pathr, becomes:
+working directory, C:/Users/Tyler/GitHub/pathr, becomes:
 
     getwd() %>%
         parse_path()
 
     ## [[1]]
-    ## [1] "C:"      "Users"   "trinker" "Desktop" "GitHub"  "pathr"
+    ## [1] "C:"     "Users"  "Tyler"  "GitHub" "pathr"
 
 While this isn't earth shattering it allows the **pathr** manipulation
 functions to extract, replace, and recombine parts of the *path*
 *elements* into a *sub-path*. Here I use *path* to mean the original
-path, C:/Users/trinker/Desktop/GitHub/pathr. A path is simply a slash
-separated mapping of the location of a file or directory within a
-hierarchical order of sub-directories. These sub-directories are the
-*elements* of the path. The final output from one of the manipulation
-functions is a *sub-path* of the original at most the same number of
-elements as the original.
+path, C:/Users/Tyler/GitHub/pathr. A path is simply a slash separated
+mapping of the location of a file or directory within a hierarchical
+order of sub-directories. These sub-directories are the *elements* of
+the path. The final output from one of the manipulation functions is a
+*sub-path* of the original at most the same number of elements as the
+original.
 
 In this example I parse a multi-path vector:
 
@@ -288,16 +288,16 @@ taking `tail(x, 1)` (or the last element).
     myfiles %>%
         dirname()
 
-    ##  [1] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [2] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [3] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [4] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [5] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [6] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [7] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [8] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [9] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ## [10] "C:/Users/trinker/Documents/Packages/qdap/R"
+    ##  [1] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [2] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [3] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [4] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [5] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [6] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [7] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [8] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [9] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ## [10] "C:/Users/Tyler/Documents/Packages/qdap/R"
 
     myfiles %>%
         parse_path() %>% 
@@ -594,13 +594,14 @@ package as installed in **R** library:
     file_path(.libPaths(), "pathr") %>%
         tree()
 
-    ## Folder PATH listing for volume BOOTCAMP
-    ## Volume serial number is 50A2-2258
-    ## C:\R\R-3.2.2\LIBRARY\PATHR
+    ## Folder PATH listing for volume Windows
+    ## Volume serial number is 70BF-5124
+    ## C:\R\R-DEVEL\LIBRARY\PATHR
     ## |   build.R
     ## |   CITATION
     ## |   DESCRIPTION
     ## |   INDEX
+    ## |   maintenance.R
     ## |   NAMESPACE
     ## |   NEWS
     ## |   
@@ -670,7 +671,7 @@ contents) to visualize the hierarchical structure of a path's elements.
 
     ## -> C:
     ##   -> R
-    ##     -> R-3.2.2
+    ##     -> R-devel
     ##       -> library
     ##         -> pathr
     ##           -> DESCRIPTION
@@ -718,19 +719,20 @@ be passed along in the chain.
 
     ##  [1] "bin"            "CHANGES"        "COPYING"        "doc"           
     ##  [5] "etc"            "include"        "library"        "MD5"           
-    ##  [9] "modules"        "README"         "README.R-3.2.2" "share"         
+    ##  [9] "modules"        "README"         "README.R-devel" "share"         
     ## [13] "src"            "Tcl"            "tests"          "unins000.dat"  
-    ## [17] "unins000.exe"
+    ## [17] "unins000.exe"   "unins001.dat"   "unins001.exe"
 
     ## What was copied to the clipboard
     clipr::read_clip()
 
-    ##  [1] "C:/R/R-32~1.2/bin"            "C:/R/R-32~1.2/CHANGES"       
-    ##  [3] "C:/R/R-32~1.2/COPYING"        "C:/R/R-32~1.2/doc"           
-    ##  [5] "C:/R/R-32~1.2/etc"            "C:/R/R-32~1.2/include"       
-    ##  [7] "C:/R/R-32~1.2/library"        "C:/R/R-32~1.2/MD5"           
-    ##  [9] "C:/R/R-32~1.2/modules"        "C:/R/R-32~1.2/README"        
-    ## [11] "C:/R/R-32~1.2/README.R-3.2.2" "C:/R/R-32~1.2/share"         
-    ## [13] "C:/R/R-32~1.2/src"            "C:/R/R-32~1.2/Tcl"           
-    ## [15] "C:/R/R-32~1.2/tests"          "C:/R/R-32~1.2/unins000.dat"  
-    ## [17] "C:/R/R-32~1.2/unins000.exe"
+    ##  [1] "C:/R/R-devel/bin"            "C:/R/R-devel/CHANGES"       
+    ##  [3] "C:/R/R-devel/COPYING"        "C:/R/R-devel/doc"           
+    ##  [5] "C:/R/R-devel/etc"            "C:/R/R-devel/include"       
+    ##  [7] "C:/R/R-devel/library"        "C:/R/R-devel/MD5"           
+    ##  [9] "C:/R/R-devel/modules"        "C:/R/R-devel/README"        
+    ## [11] "C:/R/R-devel/README.R-devel" "C:/R/R-devel/share"         
+    ## [13] "C:/R/R-devel/src"            "C:/R/R-devel/Tcl"           
+    ## [15] "C:/R/R-devel/tests"          "C:/R/R-devel/unins000.dat"  
+    ## [17] "C:/R/R-devel/unins000.exe"   "C:/R/R-devel/unins001.dat"  
+    ## [19] "C:/R/R-devel/unins001.exe"
