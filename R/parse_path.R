@@ -9,7 +9,7 @@
 #' @examples
 #' parse_path(files)
 parse_path <- function(x){
-    out <- strsplit(x, "\\\\|/")
+    out <- strsplit(x, "(\\\\|/)+")
     class(out) <- c("parse_path")
     out
 }

@@ -56,9 +56,9 @@
 #'     parse_path() %>%
 #'     front()
 front <- function(x, n=-1, collapse = TRUE, ...){
+    x <- manipulate_parsed(x)
     y <- lapply(x, utils::head, n=n)
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 
 
@@ -70,8 +70,8 @@ front <- function(x, n=-1, collapse = TRUE, ...){
 #' @export
 #' @rdname front
 back <- function(x, n=1, collapse = TRUE, ...){
+    x <- manipulate_parsed(x)
     y <- lapply(x, utils::tail, n=n)
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 

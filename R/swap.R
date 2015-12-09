@@ -46,6 +46,7 @@
 #'     parse_path() %>%
 #'     swap_regex("^(P|R)", "oops")
 swap <- function(x, inds, replacement, pattern = NULL, collapse = TRUE, ...) {
+    x <- manipulate_parsed(x)
     if (is.null(pattern)){
         y <- lapply(x, function(z) {
             z[inds] <- replacement
@@ -57,30 +58,29 @@ swap <- function(x, inds, replacement, pattern = NULL, collapse = TRUE, ...) {
             z
         })
     }
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 
 #' @export
 #' @rdname swap
 swap_index <- function(x, inds, replacement, collapse = TRUE, ...) {
+    x <- manipulate_parsed(x)
     y <- lapply(x, function(z) {
         z[inds] <- replacement
         z
     })
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 
 
 #' @export
 #' @rdname swap
 swap_regex <- function(x, pattern, replacement, collapse = TRUE, ...) {
+    x <- manipulate_parsed(x)
     y <- lapply(x, function(z) {
         z[grepl(pattern, z, perl=TRUE, ...)] <- replacement
         z
     })
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 

@@ -27,9 +27,9 @@
 #'     parse_path() %>%
 #'     index(3)
 index <- function(x, inds, collapse = TRUE, ...){
+    x <- manipulate_parsed(x)
     y <- lapply(x, function(z) z[inds])
-    if (isTRUE(collapse)) y <- normalize(y)
-    y
+    class_manipulate(y, collapse)
 }
 
 
