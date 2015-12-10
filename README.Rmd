@@ -210,7 +210,7 @@ Often the user will want to replace elements of a path with another. The `swap` 
 
 #### `swap`
 
-In this scenerio I replace the root tilde with `MyRoot`:
+In this scenario I replace the root tilde with `MyRoot`:
 
 ```{r}
 myfiles %>%
@@ -293,7 +293,7 @@ c("C:\\Users\\Tyler\\AppData\\Local\\Temp\\Rtmp2Ll9d9", "C:/R/R-3.2.2") %>%
 
 #### Windows Fix (single backslashes)
 
- `win_fix` reads an **R** unfriendly Windows path (single backslashes) and replaces with friendly foward slashes.  This functionality can't be demonstrated within a knitr document because the single backslahes can't be parsed or copied to the clipboard from within R.
+ `win_fix` reads an **R** unfriendly Windows path (single backslashes) and replaces with friendly forward slashes.  This functionality can't be demonstrated within a knitr document because the single backslashes can't be parsed or copied to the clipboard from within R.
  
 If the user were to copy the following path, `~\Packages\qdap\R\cm_code.overlap.R`, to the clipboard and run `win_fix()` the result would be: `"~/Packages/qdap/R/cm_code.overlap.R"`
 
@@ -304,7 +304,7 @@ Functions of this class are designed to allow the user to examine structural asp
 
 ### Tree
 
-`tree` allows the user to see the hierarchical structure of a path's contents (all the sub-directories and files contained within a parent directory) as a tree.  This function is experimental, OS dependant, and requires that the tree program ([tree for Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true) or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be installed.
+`tree` allows the user to see the hierarchical structure of a path's contents (all the sub-directories and files contained within a parent directory) as a tree.  This function is experimental, OS dependent, and requires that the tree program ([tree for Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true) or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be installed.
 
 On my Windows system this is the tree structure for the **pathr** package as installed in **R** library:
 
@@ -328,7 +328,7 @@ The last type of functions in **pathr** use the operating system to do some sort
 
 ### Opening
 
-`open_path` uses the operating system defaults to open directories and files.  This function is operating system and setting dependant.  Results may not be consistent across operating systems.  Depending upon the default programs for file types the results may vary as well.  Some files may not be able to be opened.
+`open_path` uses the operating system defaults to open directories and files.  This function is operating system and setting dependent.  Results may not be consistent across operating systems.  Depending upon the default programs for file types the results may vary as well.  Some files may not be able to be opened.
 
 #### Opening Directories
 
