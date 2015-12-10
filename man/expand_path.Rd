@@ -18,7 +18,7 @@ path, replacing the leading tilde by the user's home directory (if defined on
 that platform).
 }
 \examples{
-library*magrittr)
+library(magrittr)
 file_path("~/mydir", paste0("file", 1:2, ".pdf")) \%>\%
     expand_path()
 }

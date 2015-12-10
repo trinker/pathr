@@ -9,7 +9,7 @@
 #' @export
 #' @seealso \code{\link[base]{file.path}}
 #' @examples
-#' library*magrittr)
+#' library(magrittr)
 #' file_path("~/mydir", paste0("file", 1:2, ".pdf")) %>%
 #'     expand_path()
 expand_path <- function(x){
