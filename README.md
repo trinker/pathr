@@ -562,21 +562,27 @@ the user's home directory.
     ## [1] "C:/Users/Tyler/Documents/mydir/subdir/myfile.pdf"
 
 The user may have noticed that in the example [above](#extracting),
-demonstrating `back`'s ability to mimic `basename`, is incomplete. That
-is the outputs from `back` and `basename` are not identical. This is
-because `basename`, by default, expands the tilde in the example
-`myfiles` whereas `back` does not. Simply adding `expand_path` on the
-end of the chain replicates `basename` exactly.
+demonstrating `front`'s ability to mimic `dirname`, is incomplete. That
+is the outputs from `front` and `dirname` are not identical. This is
+because `dirname`, by default, expands the tilde in the example
+`myfiles` whereas `front` does not. Simply adding `expand_path` on the
+end of the chain replicates `dirname` exactly.
 
     myfiles %>%
         parse_path() %>% 
-        back() %>%
+        front() %>%
         expand_path()
 
-    ##  [1] "cm_range2long.R"      "contributors.geojson" "mcsv_r.R"            
-    ##  [4] "DESCRIPTION"          "README.md"            "wfm.R"               
-    ##  [7] "adjacency_matrix.R"   "xnoy.R"               "termco.R"            
-    ## [10] "bag_o_words.R"
+    ##  [1] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [2] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [3] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [4] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [5] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [6] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [7] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [8] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [9] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ## [10] "C:/Users/Tyler/Documents/Packages/qdap/R"
 
 ### Miscellaneous
 

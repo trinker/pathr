@@ -268,12 +268,12 @@ Like `file_path` above, `expand_path` produces a path that is longer than the in
 expand_path("~/mydir/subdir/myfile.pdf")
 ```
 
-The user may have noticed that in the example [above](#extracting), demonstrating `back`'s ability to mimic `basename`, is incomplete.  That is the outputs from `back` and `basename` are not identical.  This is because `basename`, by default, expands the tilde in the example `myfiles` whereas `back` does not.  Simply adding `expand_path` on the end of the chain replicates `basename` exactly. 
+The user may have noticed that in the example [above](#extracting), demonstrating `front`'s ability to mimic `dirname`, is incomplete.  That is the outputs from `front` and `dirname` are not identical.  This is because `dirname`, by default, expands the tilde in the example `myfiles` whereas `front` does not.  Simply adding `expand_path` on the end of the chain replicates `dirname` exactly. 
 
 ```{r}
 myfiles %>%
     parse_path() %>% 
-    back() %>%
+    front() %>%
     expand_path()
 ```
 
