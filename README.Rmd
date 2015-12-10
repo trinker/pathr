@@ -279,7 +279,7 @@ myfiles %>%
 
 ### Miscellaneous
 
-As noted above, **pathr** contains a few functions that are not an extracting, replacing, or combining tool.  
+As noted above, **pathr** contains a few functions that are not an extracting, replacing, combining, or extracting tool.  
 
 #### Normalizing
 

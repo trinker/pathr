@@ -581,7 +581,7 @@ end of the chain replicates `basename` exactly.
 ### Miscellaneous
 
 As noted above, **pathr** contains a few functions that are not an
-extracting, replacing, or combining tool.
+extracting, replacing, combining, or extracting tool.
 
 #### Normalizing
 
