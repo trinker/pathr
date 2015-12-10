@@ -13,5 +13,5 @@
 #' file_path("~/mydir", paste0("file", 1:2, ".pdf")) %>%
 #'     expand_path()
 expand_path <- function(x){
-    normalize(parse_path(path.expand(x)))
+    class_manipulate(manipulate_parsed(parse_path(path.expand(x))), TRUE)
 }

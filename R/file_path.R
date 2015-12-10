@@ -11,5 +11,5 @@
 #' file_path("mydir", paste0("file", 1:2, ".pdf"))
 file_path <- function(...) {
     out <- file.path(..., fsep = .Platform[["file.sep"]])
-    normalize(parse_path(out))
+    class_manipulate(manipulate_parsed(parse_path(out)), TRUE)
 }

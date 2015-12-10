@@ -11,9 +11,9 @@
 #'     parse_path() %>%
 #'     normalize()
 normalize <- function (x) {
-    sapply(x, function(x){
+    unlist(lapply(x, function(x){
         if (length(x) == 1 && is.na(x)) return(NA)
         paste(x, collapse = "/")
-    })
+    }))
 }
 

@@ -2,6 +2,13 @@ pathr
 ============
 
 
+    ## 
+    ## Attaching package: 'pathr'
+    ## 
+    ## The following objects are masked from 'package:qdap':
+    ## 
+    ##     %>%, is.global
+
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/0.1.0/active.svg)](http://www.repostatus.org/#active)
@@ -23,8 +30,8 @@ often difficult to remember and require more time to type. Still, other
 path manipulation tasks had me building my own custom manipulation tools
 via `strsplit` and `file.path`. **pathr** is designed to be a consistent
 set of tools that allow the user to solve most path related needs simply
-by remembering 6 basic sets of parsing and manipulation tools (the first
-six rows in the table of function usage found in the [Function
+by remembering 7 basic sets of parsing and manipulation tools (the first
+seven rows in the table of function usage found in the [Function
 Usage](#function-usage) section). The package is designed to be pipeable
 (easily used within a **magrittr**/**pipeR** pipeline) but is not
 required.
@@ -43,6 +50,7 @@ Table of Contents
         -   [Extracting](#extracting)
         -   [Replacing](#replacing)
         -   [Combining](#combining)
+        -   [Expanding](#expanding)
         -   [Miscellaneous](#miscellaneous)
     -   [Examination](#examination)
         -   [Tree](#tree)
@@ -99,36 +107,41 @@ category, & descriptions are summarized in the table below:
 <td align="left">Combine file paths</td>
 </tr>
 <tr class="odd">
+<td align="left"><code>expand_path</code></td>
+<td align="left">manipulate</td>
+<td align="left">Expand tilde prefixed file path</td>
+</tr>
+<tr class="even">
 <td align="left"><code>normalize</code></td>
 <td align="left">manipulate</td>
 <td align="left">Make all path separators forward slashes</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><code>win_fix</code></td>
 <td align="left">manipulate</td>
 <td align="left">Replace single backslash with a forward slash</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><code>file_ext</code>/<code>no_file_ext</code></td>
 <td align="left">manipulate</td>
 <td align="left">Get/remove file extensions</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><code>tree</code></td>
 <td align="left">examine</td>
 <td align="left">View path structure as an ASCII style tree (experimental)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><code>indent_path</code></td>
 <td align="left">examine</td>
 <td align="left">View path hierarchy as an indented list</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><code>copy_path</code></td>
 <td align="left">action</td>
 <td align="left">Copy path(s) to clipboard</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><code>open_path</code></td>
 <td align="left">action</td>
 <td align="left">Open path(s) (directories &amp; file)</td>
@@ -249,10 +262,10 @@ Manipulating
 
 Once the path has been parsed the individual elements can be extracted
 and/or replaced to form sub-paths. In this section I break the
-manipulation functions into (1) extracting (2) replacing, and (3)
-combining types. There are a few miscellaneous **pathr** functions that
-are not an extracting, replacing, or combining tool which will be
-discussed at the end of the Manipulating section.
+manipulation functions into (1) extracting (2) replacing, (3) combining,
+and (4) expanding types. There are a few miscellaneous **pathr**
+functions that are not an extracting, replacing, combining, or expanding
+tool which will be discussed at the end of the Manipulating section.
 
 ### Extracting
 
@@ -527,7 +540,7 @@ forward slash.
 
     ## [1] "root/mydir/file1.pdf" "root/mydir/file2.pdf"
 
-This is especially useful when combined with extraction/repacement
+This is especially useful when combined with extraction/replacement
 techniques to form new paths as shown below:
 
     myfiles %>%
@@ -543,6 +556,34 @@ techniques to form new paths as shown below:
     ## [5] "Root/newPackage/R/xnoy.R"            
     ## [6] "Root/newPackage/R/termco.R"          
     ## [7] "Root/newPackage/R/bag_o_words.R"
+
+### Expanding
+
+Like `file_path` above, `expand_path` produces a path that is longer
+than the input path. `expand_path` is wrapper for `base::path.expand`
+used to expand tilde prefixed paths by replacing the leading tilde with
+the user's home directory.
+
+    expand_path("~/mydir/subdir/myfile.pdf")
+
+    ## [1] "C:/Users/Tyler/Documents/mydir/subdir/myfile.pdf"
+
+The user may have noticed that in the example [above](#extracting),
+demonstrating `back`'s ability to mimic `basename`, is incomplete. That
+is the outputs from `back` and `basename` are not identical. This is
+because `basename`, by default, expands the tilde in the example
+`myfiles` whereas `back` does not. Simply adding `expand_path` on the
+end of the chain replicates `basename` exactly.
+
+    myfiles %>%
+        parse_path() %>% 
+        back() %>%
+        expand_path()
+
+    ##  [1] "cm_range2long.R"      "contributors.geojson" "mcsv_r.R"            
+    ##  [4] "DESCRIPTION"          "README.md"            "wfm.R"               
+    ##  [7] "adjacency_matrix.R"   "xnoy.R"               "termco.R"            
+    ## [10] "bag_o_words.R"
 
 ### Miscellaneous
 
