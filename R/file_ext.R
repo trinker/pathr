@@ -17,6 +17,7 @@
 #' @export
 #' @importFrom tools file_ext file_path_sans_ext
 #' @examples
+#' \dontrun{
 #' library(magrittr)
 #' (r_files <- dir(file.path(R.home(), "doc/manual"), full.names = TRUE))
 #'
@@ -27,6 +28,7 @@
 #'     parse_path() %>%
 #'     back() %>%
 #'     no_file_ext()
+#' }
 file_ext <- tools::file_ext
 
 
