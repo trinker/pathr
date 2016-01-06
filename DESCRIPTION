@@ -6,7 +6,7 @@ Authors@R: c(person("Tyler", "Rinker", email =
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: Tools to extract and reconfigure elements of file paths.
 Depends: R (>= 3.2.2)
-Imports: clipr, data.tree, magrittr, tools, utils
+Imports: clipr, data.tree, magrittr, methods, tools, utils
 Suggests: testthat
 SystemRequirements: xclip (http://sourceforge.net/projects/xclip/) or
         xsel (http://www.vergenet.net/~conrad/software/xsel/) for

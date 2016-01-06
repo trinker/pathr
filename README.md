@@ -193,23 +193,23 @@ Parsing
 
 The `parse_path` function simply splits an atomic vector of paths into a
 list of paths split on the slash separator. For example, my current
-working directory, C:/Users/trinker/Desktop/GitHub/pathr, becomes:
+working directory, C:/Users/Tyler/GitHub/pathr, becomes:
 
     getwd() %>%
         parse_path()
 
     ## [[1]]
-    ## [1] "C:"      "Users"   "trinker" "Desktop" "GitHub"  "pathr"
+    ## [1] "C:"     "Users"  "Tyler"  "GitHub" "pathr"
 
 While this isn't earth shattering it allows the **pathr** manipulation
 functions to extract, replace, and recombine parts of the *path*
 *elements* into a *sub-path*. Here I use *path* to mean the original
-path, C:/Users/trinker/Desktop/GitHub/pathr. A path is simply a slash
-separated mapping of the location of a file or directory within a
-hierarchical order of sub-directories. These sub-directories are the
-*elements* of the path. The final output from one of the manipulation
-functions is a *sub-path* of the original at most the same number of
-elements as the original.
+path, C:/Users/Tyler/GitHub/pathr. A path is simply a slash separated
+mapping of the location of a file or directory within a hierarchical
+order of sub-directories. These sub-directories are the *elements* of
+the path. The final output from one of the manipulation functions is a
+*sub-path* of the original at most the same number of elements as the
+original.
 
 In this example I parse a multi-path vector:
 
@@ -294,16 +294,16 @@ taking `tail(x, 1)` (or the last element).
     myfiles %>%
         dirname()
 
-    ##  [1] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [2] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [3] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [4] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [5] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [6] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [7] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [8] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [9] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ## [10] "C:/Users/trinker/Documents/Packages/qdap/R"
+    ##  [1] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [2] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [3] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [4] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [5] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [6] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [7] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [8] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [9] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ## [10] "C:/Users/Tyler/Documents/Packages/qdap/R"
 
     myfiles %>%
         parse_path() %>% 
@@ -559,7 +559,7 @@ the user's home directory.
 
     expand_path("~/mydir/subdir/myfile.pdf")
 
-    ## [1] "C:/Users/trinker/Documents/mydir/subdir/myfile.pdf"
+    ## [1] "C:/Users/Tyler/Documents/mydir/subdir/myfile.pdf"
 
 The user may have noticed that in the example [above](#extracting),
 demonstrating `front`'s ability to mimic `dirname`, is incomplete. That
@@ -573,16 +573,16 @@ end of the chain replicates `dirname` exactly.
         front() %>%
         expand_path()
 
-    ##  [1] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [2] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [3] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [4] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [5] "C:/Users/trinker/Documents/Packages/qdap"  
-    ##  [6] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [7] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [8] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ##  [9] "C:/Users/trinker/Documents/Packages/qdap/R"
-    ## [10] "C:/Users/trinker/Documents/Packages/qdap/R"
+    ##  [1] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [2] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [3] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [4] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [5] "C:/Users/Tyler/Documents/Packages/qdap"  
+    ##  [6] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [7] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [8] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ##  [9] "C:/Users/Tyler/Documents/Packages/qdap/R"
+    ## [10] "C:/Users/Tyler/Documents/Packages/qdap/R"
 
 ### Miscellaneous
 
@@ -622,8 +622,9 @@ structural aspects of a path and contents.
 
 `tree` allows the user to see the hierarchical structure of a path's
 contents (all the sub-directories and files contained within a parent
-directory) as a tree. This function is experimental, OS dependent, and
-requires that the tree program ([tree for
+directory) as a tree. This function is (with default
+`use.data.tree = FALSE`) OS dependent, and requires that the tree
+program ([tree for
 Windows](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true)
 or [tree for Unix](http://www.computerhope.com/unix/tree.htm)) be
 installed.
@@ -634,13 +635,14 @@ package as installed in **R** library:
     file_path(.libPaths(), "pathr") %>%
         tree()
 
-    ## Folder PATH listing for volume BOOTCAMP
-    ## Volume serial number is 50A2-2258
-    ## C:\R\R-3.2.2\LIBRARY\PATHR
+    ## Folder PATH listing for volume Windows
+    ## Volume serial number is 70BF-5124
+    ## C:\R\R-3.2.3\LIBRARY\PATHR
     ## |   build.R
     ## |   CITATION
     ## |   DESCRIPTION
     ## |   INDEX
+    ## |   maintenance.R
     ## |   NAMESPACE
     ## |   NEWS
     ## |   
@@ -701,6 +703,71 @@ package as installed in **R** library:
     ##             test-win_fix.R
     ## 
 
+Users concerned with OS dependence can use a **data.tree**
+implementation of `tree`. This version is slower but is uniform and
+requires no outside sependencies to be installed. Additionally, the
+output is a **data.tree** `"Node"` class and can be manipulated
+accordingly.
+
+    file_path(.libPaths(), "pathr") %>%
+        tree(use.data.tree = TRUE)
+
+    ##                              levelName
+    ## 1  pathr                              
+    ## 2   ¦--build.R                        
+    ## 3   ¦--CITATION                       
+    ## 4   ¦--data                           
+    ## 5   ¦   ¦--Rdata.rdb                  
+    ## 6   ¦   ¦--Rdata.rds                  
+    ## 7   ¦   °--Rdata.rdx                  
+    ## 8   ¦--DESCRIPTION                    
+    ## 9   ¦--extra_statdoc                  
+    ## 10  ¦   °--readme.R                   
+    ## 11  ¦--help                           
+    ## 12  ¦   ¦--aliases.rds                
+    ## 13  ¦   ¦--AnIndex                    
+    ## 14  ¦   ¦--pathr.rdb                  
+    ## 15  ¦   ¦--pathr.rdx                  
+    ## 16  ¦   °--paths.rds                  
+    ## 17  ¦--html                           
+    ## 18  ¦   ¦--00Index.html               
+    ## 19  ¦   °--R.css                      
+    ## 20  ¦--INDEX                          
+    ## 21  ¦--maintenance.R                  
+    ## 22  ¦--Meta                           
+    ## 23  ¦   ¦--data.rds                   
+    ## 24  ¦   ¦--hsearch.rds                
+    ## 25  ¦   ¦--links.rds                  
+    ## 26  ¦   ¦--nsInfo.rds                 
+    ## 27  ¦   ¦--package.rds                
+    ## 28  ¦   °--Rd.rds                     
+    ## 29  ¦--NAMESPACE                      
+    ## 30  ¦--NEWS                           
+    ## 31  ¦--pathr_logo                     
+    ## 32  ¦   ¦--r_pathr.png                
+    ## 33  ¦   °--r_pathr.pptx               
+    ## 34  ¦--R                              
+    ## 35  ¦   ¦--pathr                      
+    ## 36  ¦   ¦--pathr.rdb                  
+    ## 37  ¦   °--pathr.rdx                  
+    ## 38  ¦--staticdocs                     
+    ## 39  ¦   °--index.R                    
+    ## 40  °--tests                          
+    ## 41      ¦--testthat.R                 
+    ## 42      °--testthat                   
+    ## 43          ¦--test-before.R          
+    ## 44          ¦--test-class_manipulate.R
+    ## 45          ¦--test-copy_path.R       
+    ## 46          ¦--test-file_path.R       
+    ## 47          ¦--test-front.R           
+    ## 48          ¦--test-indent_path.R     
+    ## 49          ¦--test-index.R           
+    ## 50          ¦--test-is.global.R       
+    ## 51          ¦--test-normalize.R       
+    ## 52          ¦--test-parse_path.R      
+    ## 53          ¦--test-swap.R            
+    ## 54          °--test-win_fix.R
+
 ### Indented Elements
 
 `indent_path` on the other hand, works on individual paths (not
@@ -711,7 +778,7 @@ contents) to visualize the hierarchical structure of a path's elements.
 
     ## -> C:
     ##   -> R
-    ##     -> R-3.2.2
+    ##     -> R-3.2.3
     ##       -> library
     ##         -> pathr
     ##           -> DESCRIPTION
@@ -759,19 +826,19 @@ be passed along in the chain.
 
     ##  [1] "bin"            "CHANGES"        "COPYING"        "doc"           
     ##  [5] "etc"            "include"        "library"        "MD5"           
-    ##  [9] "modules"        "README"         "README.R-3.2.2" "share"         
+    ##  [9] "modules"        "README"         "README.R-3.2.3" "share"         
     ## [13] "src"            "Tcl"            "tests"          "unins000.dat"  
     ## [17] "unins000.exe"
 
     ## What was copied to the clipboard
     clipr::read_clip()
 
-    ##  [1] "C:/R/R-32~1.2/bin"            "C:/R/R-32~1.2/CHANGES"       
-    ##  [3] "C:/R/R-32~1.2/COPYING"        "C:/R/R-32~1.2/doc"           
-    ##  [5] "C:/R/R-32~1.2/etc"            "C:/R/R-32~1.2/include"       
-    ##  [7] "C:/R/R-32~1.2/library"        "C:/R/R-32~1.2/MD5"           
-    ##  [9] "C:/R/R-32~1.2/modules"        "C:/R/R-32~1.2/README"        
-    ## [11] "C:/R/R-32~1.2/README.R-3.2.2" "C:/R/R-32~1.2/share"         
-    ## [13] "C:/R/R-32~1.2/src"            "C:/R/R-32~1.2/Tcl"           
-    ## [15] "C:/R/R-32~1.2/tests"          "C:/R/R-32~1.2/unins000.dat"  
-    ## [17] "C:/R/R-32~1.2/unins000.exe"
+    ##  [1] "C:/R/R-32~1.3/bin"            "C:/R/R-32~1.3/CHANGES"       
+    ##  [3] "C:/R/R-32~1.3/COPYING"        "C:/R/R-32~1.3/doc"           
+    ##  [5] "C:/R/R-32~1.3/etc"            "C:/R/R-32~1.3/include"       
+    ##  [7] "C:/R/R-32~1.3/library"        "C:/R/R-32~1.3/MD5"           
+    ##  [9] "C:/R/R-32~1.3/modules"        "C:/R/R-32~1.3/README"        
+    ## [11] "C:/R/R-32~1.3/README.R-3.2.3" "C:/R/R-32~1.3/share"         
+    ## [13] "C:/R/R-32~1.3/src"            "C:/R/R-32~1.3/Tcl"           
+    ## [15] "C:/R/R-32~1.3/tests"          "C:/R/R-32~1.3/unins000.dat"  
+    ## [17] "C:/R/R-32~1.3/unins000.exe"
