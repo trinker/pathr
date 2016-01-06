@@ -7,6 +7,6 @@
 \alias{pathr-package}
 \title{Easy Manipulation and Piping of File Paths}
 \description{
-Tools to extract and reconfigure elements of filepaths.
+Tools to extract and reconfigure elements of file paths.
 }
 

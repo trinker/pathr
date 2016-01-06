@@ -1,6 +1,6 @@
 #' Easy Manipulation and Piping of File Paths
 #'
-#' Tools to extract and reconfigure elements of filepaths.
+#' Tools to extract and reconfigure elements of file paths.
 #' @docType package
 #' @name pathr
 #' @aliases pathr package-pathr

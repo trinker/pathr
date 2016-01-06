@@ -4,16 +4,20 @@
 \alias{tree}
 \title{Generate a Directory Tree}
 \usage{
-tree(path = ".", out = NULL, include.files = TRUE, additional = NULL,
+tree(path = ".", include.files = TRUE, all.files = TRUE,
+  use.data.tree = FALSE, out = NULL, additional = NULL,
   copy2clip = FALSE)
 }
 \arguments{
 \item{path}{A path to the directory.}
 
-\item{out}{An optional outfile (typically .txt) to print to.}
-
 \item{include.files}{logical.  If \code{TRUE} files and drectories will be
 included.}
+
+\item{all.files}{logical.   If \code{FALSE}, only the names of visible files
+are returned. If \code{TRUE}, all file names will be returned.}
+
+\item{out}{An optional outfile (typically .txt) to print to.}
 
 \item{additional}{Additonal arguments passed to
 href{https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true}{\code{tree}}
@@ -23,13 +27,13 @@ href{https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/e
 via \code{\link[clipr]{write_clip}}.}
 }
 \description{
-Given a directory, generate a directory tree diagram.  currently, this
-function is experimental.
+Given a directory, generate a directory tree diagram.
 }
 \note{
-The \pkg{tree} program must be installed to use.
+The \pkg{tree} program must be installed to use \code{use.data.tree = FALSE}.
 }
 \examples{
+tree(system.file("", package = "base"), use.data.tree = TRUE)
 \dontrun{
 tree()
 tree(.libPaths())
