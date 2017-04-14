@@ -701,7 +701,7 @@ package as installed in **R** library:
 
 Users concerned with OS dependence can use a **data.tree**
 implementation of `tree`. This version is slower but is uniform and
-requires no outside sependencies to be installed. Additionally, the
+requires no outside dependencies to be installed. Additionally, the
 output is a **data.tree** `"Node"` class and can be manipulated
 accordingly.
 
