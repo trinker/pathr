@@ -3,15 +3,15 @@
 #' Given a directory, generate a directory tree diagram.
 #'
 #' @param path A path to the directory.
-#' @param out An optional outfile (typically .txt) to print to.
 #' @param include.files logical.  If \code{TRUE} files and drectories will be
 #' included.
 #' @param all.files logical.   If \code{FALSE}, only the names of visible files
 #' are returned. If \code{TRUE}, all file names will be returned.
 #' @param use.data.tree logical.  If \code{TRUE} the \pkg{data.tree} package is
-#' used to make the tree, otherwise \system} is invoked with the extrenal
+#' used to make the tree, otherwise \code{system} is invoked with the extrenal
 #' \pkg{tree} program.  The former produces a \code{"R6"}, \code{"Node"} object
 #' that can be manipulated accordingly.  The latter will be faster in most cases.
+#' @param out An optional outfile (typically .txt) to print to.
 #' @param additional Additonal arguments passed to
 #' href{https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/tree.mspx?mfr=true}{\code{tree}}
 #' (Windows) or \href{http://www.computerhope.com/unix/tree.htm}{tree} (Unix).

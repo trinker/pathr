@@ -17,6 +17,11 @@ included.}
 \item{all.files}{logical.   If \code{FALSE}, only the names of visible files
 are returned. If \code{TRUE}, all file names will be returned.}
 
+\item{use.data.tree}{logical.  If \code{TRUE} the \pkg{data.tree} package is
+used to make the tree, otherwise \code{system} is invoked with the extrenal
+\pkg{tree} program.  The former produces a \code{"R6"}, \code{"Node"} object
+that can be manipulated accordingly.  The latter will be faster in most cases.}
+
 \item{out}{An optional outfile (typically .txt) to print to.}
 
 \item{additional}{Additonal arguments passed to
