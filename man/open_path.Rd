@@ -23,10 +23,9 @@ able to be opened.
 open_path()
 }
 }
-\author{
-Dason Kurkiewicz and Tyler Rinker <tyler.rinker@gmail.com>.
-}
 \references{
 \url{http://stackoverflow.com/q/12135732/1000343}
 }
-
+\author{
+Dason Kurkiewicz and Tyler Rinker <tyler.rinker@gmail.com>.
+}

@@ -14,4 +14,3 @@
 \description{
 Prints a tree object.
 }
-

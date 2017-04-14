@@ -12,4 +12,3 @@ data(files)
 A dataset containing a character vector of file paths.
 }
 \keyword{datasets}
-

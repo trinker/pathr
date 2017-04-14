@@ -41,4 +41,3 @@ r_files \%>\%
     no_file_ext()
 }
 }
-

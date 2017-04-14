@@ -1,20 +1,19 @@
 Package: pathr
 Title: Easy Manipulation and Piping of File Paths
 Version: 0.0.1
-Authors@R: c(person("Tyler", "Rinker", email =
-        "tyler.rinker@gmail.com", role = c("aut", "cre")))
+Authors@R: c(person("Tyler", "Rinker", email = "tyler.rinker@gmail.com", role = c("aut",
+          "cre")))
 Maintainer: Tyler Rinker <tyler.rinker@gmail.com>
 Description: Tools to extract and reconfigure elements of file paths.
 Depends: R (>= 3.2.2)
 Imports: clipr, data.tree, magrittr, methods, tools, utils
 Suggests: testthat
-SystemRequirements: xclip (http://sourceforge.net/projects/xclip/) or
-        xsel (http://www.vergenet.net/~conrad/software/xsel/) for
-        accessing the X11 clipboard
-Date: 2016-01-06
+SystemRequirements: xclip (http://sourceforge.net/projects/xclip/) or xsel
+          (http://www.vergenet.net/~conrad/software/xsel/) for accessing the X11 clipboard
+Date: 2017-04-14
 URL: https://github.com/trinker/pathr
 BugReports: http://github.com/trinker/pathr/issues
 License: GPL-2
 LazyData: TRUE
 Roxygen: list(wrap = FALSE)
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

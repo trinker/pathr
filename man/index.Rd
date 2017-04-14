@@ -40,7 +40,6 @@ files \%>\%
     index(3)
 }
 \seealso{
-Other sub.path.manipulation.functions: \code{\link{before}},
+Other sub-path manipulation functions: \code{\link{before}},
   \code{\link{front}}, \code{\link{swap}}
 }
-

@@ -21,4 +21,3 @@ c("C:\\\\Users\\\\Tyler\\\\AppData\\\\Local\\\\Temp\\\\Rtmp2Ll9d9", "C:/R/R-3.2.
     parse_path() \%>\%
     normalize()
 }
-

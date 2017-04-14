@@ -58,7 +58,7 @@ dir_tree_dt <- function(path = ".", include.files = TRUE, all.files = TRUE,
     z[["pathString"]] <- contents
 
     out <- data.tree::as.Node(z)
-    out2 <- capture.output(out)[-1]
+    out2 <- utils::capture.output(out)[-1]
     out2 <- gsub("^\\d+\\s+", "", out2)
     out2[-1] <- paste0("  ", out2[-1])
     #cat(paste(out2, collapse="\n"), "\n")

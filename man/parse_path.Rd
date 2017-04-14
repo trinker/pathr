@@ -19,4 +19,3 @@ individual elements.
 \examples{
 parse_path(files)
 }
-

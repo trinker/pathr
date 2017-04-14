@@ -66,7 +66,6 @@ files \%>\%
     swap_regex("^(P|R)", "oops")
 }
 \seealso{
-Other sub.path.manipulation.functions: \code{\link{before}},
+Other sub-path manipulation functions: \code{\link{before}},
   \code{\link{front}}, \code{\link{index}}
 }
-

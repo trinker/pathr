@@ -1,4 +1,4 @@
-pathr
+pathr   [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?style=social)](https://twitter.com/intent/follow?screen_name=tylerrinker)
 ============
 
 
@@ -11,7 +11,8 @@ Status](https://travis-ci.org/trinker/pathr.svg?branch=master)](https://travis-c
 Status](https://coveralls.io/repos/trinker/pathr/badge.svg?branch=master)](https://coveralls.io/r/trinker/pathr?branch=master)
 <a href="https://img.shields.io/badge/Version-0.0.1-orange.svg"><img src="https://img.shields.io/badge/Version-0.0.1-orange.svg" alt="Version"/></a>
 </p>
-<img src="inst/pathr_logo/r_pathr.png" width="320" alt="pathr Logo">
+
+![](tools/pathr_logo/r_pathr.png)
 
 **pathr** is a collection of tools to extract, examine, and reconfigure
 elements of file paths. The package is born out of a frustration with
@@ -33,7 +34,7 @@ required.
 Table of Contents
 ============
 
--   [Function Usage](#function-usage)
+-   [Functions](#functions)
 -   [Installation](#installation)
 -   [Contact](#contact)
 -   [Demonstration](#demonstration)
@@ -52,7 +53,7 @@ Table of Contents
         -   [Opening](#opening)
         -   [Copying](#copying)
 
-Function Usage
+Functions
 ============
 
 
@@ -63,81 +64,81 @@ category, & descriptions are summarized in the table below:
 <table>
 <thead>
 <tr class="header">
-<th align="left">Function</th>
-<th align="left">Task</th>
-<th align="left">Description</th>
+<th>Function</th>
+<th>Task</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><code>parse_path</code></td>
-<td align="left">parsing</td>
-<td align="left">Parse path into elements (sub-directories &amp; files)</td>
+<td><code>parse_path</code></td>
+<td>parsing</td>
+<td>Parse path into elements (sub-directories &amp; files)</td>
 </tr>
 <tr class="even">
-<td align="left"><code>front</code>/<code>back</code></td>
-<td align="left">manipulate</td>
-<td align="left">Get first/last n elements of a path</td>
+<td><code>front</code>/<code>back</code></td>
+<td>manipulate</td>
+<td>Get first/last n elements of a path</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>index</code></td>
-<td align="left">manipulate</td>
-<td align="left">Get indexed elements of a path</td>
+<td><code>index</code></td>
+<td>manipulate</td>
+<td>Get indexed elements of a path</td>
 </tr>
 <tr class="even">
-<td align="left"><code>before</code>/<code>after</code></td>
-<td align="left">manipulate</td>
-<td align="left">Get n elements before/after a regex occurrence</td>
+<td><code>before</code>/<code>after</code></td>
+<td>manipulate</td>
+<td>Get n elements before/after a regex occurrence</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>swap</code>/<code>swap_index</code>/<code>swap_regex</code></td>
-<td align="left">manipulate</td>
-<td align="left">Replace elements of a path</td>
+<td><code>swap</code>/<code>swap_index</code>/<code>swap_regex</code></td>
+<td>manipulate</td>
+<td>Replace elements of a path</td>
 </tr>
 <tr class="even">
-<td align="left"><code>file_path</code></td>
-<td align="left">manipulate</td>
-<td align="left">Combine file paths</td>
+<td><code>file_path</code></td>
+<td>manipulate</td>
+<td>Combine file paths</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>expand_path</code></td>
-<td align="left">manipulate</td>
-<td align="left">Expand tilde prefixed file path</td>
+<td><code>expand_path</code></td>
+<td>manipulate</td>
+<td>Expand tilde prefixed file path</td>
 </tr>
 <tr class="even">
-<td align="left"><code>normalize</code></td>
-<td align="left">manipulate</td>
-<td align="left">Make all path separators forward slashes</td>
+<td><code>normalize</code></td>
+<td>manipulate</td>
+<td>Make all path separators forward slashes</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>win_fix</code></td>
-<td align="left">manipulate</td>
-<td align="left">Replace single backslash with a forward slash</td>
+<td><code>win_fix</code></td>
+<td>manipulate</td>
+<td>Replace single backslash with a forward slash</td>
 </tr>
 <tr class="even">
-<td align="left"><code>file_ext</code>/<code>no_file_ext</code></td>
-<td align="left">manipulate</td>
-<td align="left">Get/remove file extensions</td>
+<td><code>file_ext</code>/<code>no_file_ext</code></td>
+<td>manipulate</td>
+<td>Get/remove file extensions</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>tree</code></td>
-<td align="left">examine</td>
-<td align="left">View path structure as an ASCII style tree (experimental)</td>
+<td><code>tree</code></td>
+<td>examine</td>
+<td>View path structure as an ASCII style tree (experimental)</td>
 </tr>
 <tr class="even">
-<td align="left"><code>indent_path</code></td>
-<td align="left">examine</td>
-<td align="left">View path hierarchy as an indented list</td>
+<td><code>indent_path</code></td>
+<td>examine</td>
+<td>View path hierarchy as an indented list</td>
 </tr>
 <tr class="odd">
-<td align="left"><code>copy_path</code></td>
-<td align="left">action</td>
-<td align="left">Copy path(s) to clipboard</td>
+<td><code>copy_path</code></td>
+<td>action</td>
+<td>Copy path(s) to clipboard</td>
 </tr>
 <tr class="even">
-<td align="left"><code>open_path</code></td>
-<td align="left">action</td>
-<td align="left">Open path(s) (directories &amp; file)</td>
+<td><code>open_path</code></td>
+<td>action</td>
+<td>Open path(s) (directories &amp; file)</td>
 </tr>
 </tbody>
 </table>
@@ -158,11 +159,10 @@ to install the development version:
 Contact
 =======
 
-You are welcome to: 
-* submit suggestions and bug-reports at: <https://github.com/trinker/pathr/issues> 
-* send a pull request on: <https://github.com/trinker/pathr/> 
-* compose a friendly e-mail to: <tyler.rinker@gmail.com>
-
+You are welcome to:    
+- submit suggestions and bug-reports at: <https://github.com/trinker/pathr/issues>    
+- send a pull request on: <https://github.com/trinker/pathr/>    
+- compose a friendly e-mail to: <tyler.rinker@gmail.com>    
 
 Demonstration
 =============
@@ -637,7 +637,7 @@ package as installed in **R** library:
 
     ## Folder PATH listing for volume Windows
     ## Volume serial number is 70BF-5124
-    ## C:\R\R-3.2.3\LIBRARY\PATHR
+    ## C:\R\R-3.3.3\LIBRARY\PATHR
     ## |   build.R
     ## |   CITATION
     ## |   DESCRIPTION
@@ -672,10 +672,6 @@ package as installed in **R** library:
     ## |       nsInfo.rds
     ## |       package.rds
     ## |       Rd.rds
-    ## |       
-    ## +---pathr_logo
-    ## |       r_pathr.png
-    ## |       r_pathr.pptx
     ## |       
     ## +---R
     ## |       pathr
@@ -743,30 +739,27 @@ accordingly.
     ## 28  ¦   °--Rd.rds                     
     ## 29  ¦--NAMESPACE                      
     ## 30  ¦--NEWS                           
-    ## 31  ¦--pathr_logo                     
-    ## 32  ¦   ¦--r_pathr.png                
-    ## 33  ¦   °--r_pathr.pptx               
-    ## 34  ¦--R                              
-    ## 35  ¦   ¦--pathr                      
-    ## 36  ¦   ¦--pathr.rdb                  
-    ## 37  ¦   °--pathr.rdx                  
-    ## 38  ¦--staticdocs                     
-    ## 39  ¦   °--index.R                    
-    ## 40  °--tests                          
-    ## 41      ¦--testthat.R                 
-    ## 42      °--testthat                   
-    ## 43          ¦--test-before.R          
-    ## 44          ¦--test-class_manipulate.R
-    ## 45          ¦--test-copy_path.R       
-    ## 46          ¦--test-file_path.R       
-    ## 47          ¦--test-front.R           
-    ## 48          ¦--test-indent_path.R     
-    ## 49          ¦--test-index.R           
-    ## 50          ¦--test-is.global.R       
-    ## 51          ¦--test-normalize.R       
-    ## 52          ¦--test-parse_path.R      
-    ## 53          ¦--test-swap.R            
-    ## 54          °--test-win_fix.R
+    ## 31  ¦--R                              
+    ## 32  ¦   ¦--pathr                      
+    ## 33  ¦   ¦--pathr.rdb                  
+    ## 34  ¦   °--pathr.rdx                  
+    ## 35  ¦--staticdocs                     
+    ## 36  ¦   °--index.R                    
+    ## 37  °--tests                          
+    ## 38      ¦--testthat.R                 
+    ## 39      °--testthat                   
+    ## 40          ¦--test-before.R          
+    ## 41          ¦--test-class_manipulate.R
+    ## 42          ¦--test-copy_path.R       
+    ## 43          ¦--test-file_path.R       
+    ## 44          ¦--test-front.R           
+    ## 45          ¦--test-indent_path.R     
+    ## 46          ¦--test-index.R           
+    ## 47          ¦--test-is.global.R       
+    ## 48          ¦--test-normalize.R       
+    ## 49          ¦--test-parse_path.R      
+    ## 50          ¦--test-swap.R            
+    ## 51          °--test-win_fix.R
 
 ### Indented Elements
 
@@ -778,7 +771,7 @@ contents) to visualize the hierarchical structure of a path's elements.
 
     ## -> C:
     ##   -> R
-    ##     -> R-3.2.3
+    ##     -> R-3.3.3
     ##       -> library
     ##         -> pathr
     ##           -> DESCRIPTION
@@ -826,19 +819,19 @@ be passed along in the chain.
 
     ##  [1] "bin"            "CHANGES"        "COPYING"        "doc"           
     ##  [5] "etc"            "include"        "library"        "MD5"           
-    ##  [9] "modules"        "README"         "README.R-3.2.3" "share"         
+    ##  [9] "modules"        "README"         "README.R-3.3.3" "share"         
     ## [13] "src"            "Tcl"            "tests"          "unins000.dat"  
     ## [17] "unins000.exe"
 
     ## What was copied to the clipboard
     clipr::read_clip()
 
-    ##  [1] "C:/R/R-32~1.3/bin"            "C:/R/R-32~1.3/CHANGES"       
-    ##  [3] "C:/R/R-32~1.3/COPYING"        "C:/R/R-32~1.3/doc"           
-    ##  [5] "C:/R/R-32~1.3/etc"            "C:/R/R-32~1.3/include"       
-    ##  [7] "C:/R/R-32~1.3/library"        "C:/R/R-32~1.3/MD5"           
-    ##  [9] "C:/R/R-32~1.3/modules"        "C:/R/R-32~1.3/README"        
-    ## [11] "C:/R/R-32~1.3/README.R-3.2.3" "C:/R/R-32~1.3/share"         
-    ## [13] "C:/R/R-32~1.3/src"            "C:/R/R-32~1.3/Tcl"           
-    ## [15] "C:/R/R-32~1.3/tests"          "C:/R/R-32~1.3/unins000.dat"  
-    ## [17] "C:/R/R-32~1.3/unins000.exe"
+    ##  [1] "C:/R/R-33~1.3/bin"            "C:/R/R-33~1.3/CHANGES"       
+    ##  [3] "C:/R/R-33~1.3/COPYING"        "C:/R/R-33~1.3/doc"           
+    ##  [5] "C:/R/R-33~1.3/etc"            "C:/R/R-33~1.3/include"       
+    ##  [7] "C:/R/R-33~1.3/library"        "C:/R/R-33~1.3/MD5"           
+    ##  [9] "C:/R/R-33~1.3/modules"        "C:/R/R-33~1.3/README"        
+    ## [11] "C:/R/R-33~1.3/README.R-3.3.3" "C:/R/R-33~1.3/share"         
+    ## [13] "C:/R/R-33~1.3/src"            "C:/R/R-33~1.3/Tcl"           
+    ## [15] "C:/R/R-33~1.3/tests"          "C:/R/R-33~1.3/unins000.dat"  
+    ## [17] "C:/R/R-33~1.3/unins000.exe"

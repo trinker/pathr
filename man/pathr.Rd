@@ -2,11 +2,10 @@
 % Please edit documentation in R/pathr-package.R
 \docType{package}
 \name{pathr}
-\alias{package-pathr}
 \alias{pathr}
+\alias{package-pathr}
 \alias{pathr-package}
 \title{Easy Manipulation and Piping of File Paths}
 \description{
 Tools to extract and reconfigure elements of file paths.
 }
-

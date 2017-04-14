@@ -22,4 +22,3 @@ file_path("mydir", paste0("file", 1:2, ".pdf"))
 \seealso{
 \code{\link[base]{file.path}}
 }
-

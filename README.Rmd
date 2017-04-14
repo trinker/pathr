@@ -23,7 +23,7 @@ knit_hooks$set(htmlcap = function(before, options, envir) {
     })
 library(pathr)
 knitr::opts_knit$set(self.contained = TRUE, cache = FALSE)
-knitr::opts_chunk$set(fig.path = "inst/figure/")
+knitr::opts_chunk$set(fig.path = "tools/figure/")
 curwd <- getwd()
 parsedwd <- parse_path(curwd)
 ```
@@ -33,11 +33,11 @@ parsedwd <- parse_path(curwd)
 [![Coverage Status](https://coveralls.io/repos/trinker/pathr/badge.svg?branch=master)](https://coveralls.io/r/trinker/pathr?branch=master)
 `r verbadge`
 
-<img src="inst/pathr_logo/r_pathr.png" width="320" alt="pathr Logo">  
+![](tools/pathr_logo/r_pathr.png)
 
 **pathr** is a collection of tools to extract, examine, and reconfigure elements of file paths.  The package is born out of a frustration with finding the right base **R** tools to grab certain parts of a path.  Often these functions are located in packages that are base install but not loaded by default (e.g., `tools::file_ext`).  Additionally, many names of path manipulation functions in base **R** are longer and thus often difficult to remember and require more time to type.  Still, other path manipulation tasks had me building my own custom manipulation tools via `strsplit` and `file.path`.  **pathr** is designed to be a consistent set of tools that allow the user to solve most path related needs simply by remembering 7 basic sets of parsing and manipulation tools (the first seven rows in the table of function usage found in the [Function Usage](#function-usage) section).  The package is designed to be pipeable (easily used within a **magrittr**/**pipeR** pipeline) but is not required.
 
-# Function Usage
+# Functions
 
 Functions typically fall into the task category of (1) parsing, (2) manipulating, (3) examining, & (4) action.  The main functions, task category, & descriptions are summarized in the table below:
 
